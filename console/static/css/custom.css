@@ -1,0 +1,22 @@
+.jumbotron {
+        margin: 60px 0;
+        text-align: center;
+}
+
+.flaky-query {
+  padding: 1px;
+  margin-bottom: 1px;
+  background-color: #D8C0A6;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.flaky-response {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #FED0D0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
