@@ -5,4 +5,5 @@ See this [blogpost](http://dimaborzov.com/flaky.html) for the motivation behind 
 
 Here is the structure of the source code:
 * */console* folder contains Google AppEngine-compatible web application to be used for demonstration.
-* */flaky* contains the package source code.
+* *flaky.go* contains the package source code.
+* *flaky_test.go* contains testing units.

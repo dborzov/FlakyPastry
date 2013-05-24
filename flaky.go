@@ -41,3 +41,30 @@ func FloatToFlake(x float64) Flake {
 	out := Flake{1, []Flake{nominator, denominator}}
 	return out
 }
+
+func (f Flake) String() string {
+	return f.ShowLisp()
+}
+
+func (f Flake) Float64() float64 {
+	if len(f.Terms) == 0 {
+		return float64(f.Operation)
+	} else {
+		var value float64
+		switch f.Operation {
+		case 0:
+			value = 1.
+			for i := range f.Terms {
+				value = value * f.Terms[i].Float64()
+			}
+		case 1:
+			value = f.Terms[0].Float64() / f.Terms[1].Float64()
+		case 2:
+			value = 0.
+			for i := range f.Terms {
+				value = value + f.Terms[i].Float64()
+			}
+		}
+		return value
+	}
+}
